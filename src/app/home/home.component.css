@@ -1,0 +1,33 @@
+.home{
+    background-color: aliceblue;
+    height: 100vh;
+}
+
+.heading{
+    text-align: center;
+    justify-content: center;
+    font-size: 70px;
+    font-weight: bold;
+    color: rgb(12, 11, 11);
+    padding-top: 15%;
+}
+
+.subheading{
+    text-align: left;
+    justify-content: left;
+    font-weight: bold;
+    color: rgb(12, 11, 11);
+    margin-left: 22%;
+
+}
+
+.image{
+    justify-content: right;
+    padding-top: 10%;
+}
+
+.button{
+    justify-content: center;
+    text-align: center;
+    margin-left: 22%;
+}

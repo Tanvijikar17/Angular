@@ -1,0 +1,36 @@
+.profile{
+    background-color: aliceblue;
+    height: 100vh;
+}
+
+.profile{
+    padding-top: 10vh;
+    padding-bottom: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-profile{
+    width: 400px;
+    padding-top: 60px;
+    /* background-image: linear-gradient(to right top, #99bc85, #a0c18d, #a7c694, #aecc9c, #b5d1a4, #bad5a9, #bfd8af, #c4dcb4, #c8dfb8, #cce1bc, #d0e4c1, #d4e7c5); */
+    background-color: rgb(195, 195, 243);
+}
+
+.full-form{
+  width: 100%;
+}
+
+/* .form-group{
+  width: 100%;
+} */
+
+.matIconSuffix{
+  color: 000;
+}
+
+@media screen and (min-width: 320px) and (max-width: 400px) {
+  .card-profile {
+    width: 100%;
+  }
+}

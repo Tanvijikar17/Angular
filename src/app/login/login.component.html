@@ -1,0 +1,52 @@
+<div class="container-fluid profile">
+    <div class="row pt-2 mb-2">
+        <div class="col-12 mb-2">
+            <mat-card class="card-profile">
+                <mat-card-content>
+                    <div class="row">
+                        <div class="col-12 text-center mb-2 pb-3 ">
+                            <img style="height:70px;" src="https://clipground.com/images/profile-logo-3.png">
+                            <div class="fw-bold" style="font-size: 20px;">User Login</div>
+                        </div>
+                        <div class="form-group text-center">
+                        <div class="col-12 mb-2">
+                            <mat-form-field class="full-form" appearance="outline">
+                                <mat-label>Enter your Email</mat-label>
+                                <mat-icon matPrefix><i class="material-icons">person</i></mat-icon>
+                                <input matInput [formControl]="email" placeholder="" required>
+                                <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-12 mb-2">
+                            <mat-form-field class="full-form" appearance="outline">
+                                <mat-label>Enter your password</mat-label>
+                                <input matInput [type]="hide ? 'password' : 'text'" [formControl]="password">
+                                <mat-error *ngIf="password.hasError('required')">
+                                  Password is required
+                                </mat-error>
+                                <mat-error *ngIf="password.hasError('minlength') && !password.hasError('required')">
+                                  Password should be at least 8 characters long
+                                </mat-error>
+                                <button mat-icon-button matPrefix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                                  <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                                </button>
+                            </mat-form-field>
+                        </div>
+                        </div>
+                        <div>
+                            <div class="row mb-5">
+                            <div class="col"><a href="#" [routerLink]= "['/forgot']">Forgot Password ?</a></div>
+                            <div class="col link"><a href="#" [routerLink]= "['/register']">New user? Register</a></div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 text-center mb">
+                            <button mat-raised-button  style="background-color: rgb(247, 159, 58);" (click)="update()">Login</button>
+                        </div>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+</div>
+
